@@ -1,0 +1,27 @@
+
+[filter:informant]
+use = egg:swift#informant
+<% if @statsd_host -%>
+statsd_host = <%= @statsd_host %>
+<% end -%>
+<% if @statsd_port -%>
+statsd_port = <%= @statsd_port %>
+<% end -%>
+<% if @statsd_sample_rate -%>
+statsd_sample_rate = <%= @statsd_sample_rate %>
+<% end -%>
+<% if @valid_http_methods -%>
+valid_http_methods = <%= @valid_http_methods_real.upcase %>
+<% end -%>
+<% if @combined_events -%>
+combined_events = <%= @combined_events %>
+<% end -%>
+<% if @combine_key -%>
+combine_key = <%= @combine_key %>
+<% end -%>
+<% if @metric_name_prepend -%>
+metric_name_prepend = <%= @metric_name_prepend %>
+<% end -%>
+<% if @prefix_accounts -%>
+prefix_accounts = <%= @prefix_accounts %>
+<% end -%>
