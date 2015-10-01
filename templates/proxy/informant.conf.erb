@@ -1,6 +1,6 @@
 
 [filter:informant]
-use = egg:swift#informant
+use = egg:informant#informant
 <% if @statsd_host -%>
 statsd_host = <%= @statsd_host %>
 <% end -%>
