@@ -81,10 +81,6 @@ class swift::proxy::informant (
     validate_integer($statsd_port)
   }
 
-  if ($statsd_sample_rate) {
-    validate_numeric($statsd_sample_rate)
-  }
-
   if ($combined_events) {
     validate_re($combined_events,['yes','no'])
   }
